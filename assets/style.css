@@ -1,0 +1,48 @@
+body{
+    font-family: 'Merriweather', serif;
+    background-image: url("./images/houndstooth-pattern.png");
+    background-repeat: repeat;
+    color: #777777; 
+    font-size: 20px;
+}
+.container{
+    position: relative;
+}
+
+#collapsibleNavbar{
+    position: absolute;
+    right: 0;
+}
+
+.navbar.navbar-expand-sm.bg-light.navbar-light{
+    padding-top: 0;
+    padding-bottom: 0;
+    background: #ffffff;
+}
+
+.navbar-light .navbar-brand{
+    background-color: #4aaaa5;
+    padding: 40px;
+    margin: 0;
+    color: rgb(255,255,255);
+    font-size: 2rem;
+}
+
+.navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:hover{
+    color: rgb(255,255,255);
+}
+
+.navbar-light .collapse.navbar-collapse li:not(:first-child) {
+    border-left: 2px solid #c7c7c7;
+}
+
+.nav-link{
+    padding-top: 0;
+    padding-bottom: 0;
+    line-height: 0.75;
+    color: #7777777;
+}
+
+.main-body{
+    background: rgb(255,255,255);
+}
