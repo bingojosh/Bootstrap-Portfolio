@@ -1,14 +1,13 @@
-/* Needed this to make my sticky footer work or else it just stuck at the place where the bottom of the screen was when loaded in */
-/* html{ 
+/* Required for sticky footer. */
+html{ 
     position: relative;
     min-height: 100%;
-} */
+}
 
 body{
     font-family: 'Merriweather', serif;
     background-image: url("./images/houndstooth-pattern.png");
     background-repeat: repeat;
-    color: #777777; 
     font-size: 20px;
 }
 
@@ -16,65 +15,21 @@ body{
     position: relative;
 }
 
-#content{
-    margin-bottom: 110px;
-}
-
 #collapsibleNavbar{
     position: absolute;
     right: 8px;
 }
 
-.navbar.navbar-expand-sm.bg-light.navbar-light{
-    padding-top: 0;
-    padding-bottom: 0;
-    border: 1px solid #cccccc;
-}
-
-/* @media (min-width: 767px) .navbar-toggler{
-    display:none;
-}
-
-@media (min-width: 576px) .navbar-toggler{
-    display: block;
-} */
-
-.bg-light{
-    background: #ffffff!important;
-}
-
 .navbar-light .navbar-brand{
     background-color: #4aaaa5;
-    padding: 40px;
-    margin: 0;
-    color: rgb(255,255,255);
     font-size: 2rem;
 }
 
-.navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:hover{
-    color: rgb(255,255,255);
-}
-
-.navbar-light .collapse.navbar-collapse li:not(:first-child) {
-    border-left: 2px solid #c7c7c7;
-}
-
 .nav-link{
-    padding-top: 0;
-    padding-bottom: 0;
     line-height: 0.75;
-    color: #777777;
-}
-
-.main-body{
-    background: rgb(255,255,255);
-    padding: 35px;
-    border: 1px solid #cccccc;
-    margin-top: 60px;
 }
 
 h1{
-    margin: 30px 0px 0px 0px;
     color: #4aaaa5;
 }
 
@@ -94,25 +49,39 @@ h1{
 }
 
 .portfolio-item-text{
-    background: #4aaaa5;
-    text-align: center;
+    display:none;
     position: absolute;
-    bottom: 30px;
-    left: 20px;
-    width: calc(100% - 30px);
+    bottom: calc(100%/2);
     color: white;
+    z-index: 3;
 }
 
-/* .col-md-4 a .img-fluid.rounded{
-    box-sizing: content-box;
-    border: 5px white solid;
-    margin: 10px 0 10px 0;
+.card{ 
+    position: relative;
+    z-index:1;
 }
 
-.col-md-4 a .img-fluid.rounded:hover{
-    border: 5px #4aaaa5 solid;
-} */
+.card::before{
+    content:"";
+    position: absolute;
+    top:0;
+    left:0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: rgba(20, 148, 148, 0.667);
+    transition: .5s ease;
+}
 
+.card:hover::before{
+    opacity: 0.7;
+}
+
+.card:hover .portfolio-item-text {
+    display: block;
+}
+/* I just copied this form stuff because we haven't gone over forms yet. */
 * {
     box-sizing: border-box;
 }
