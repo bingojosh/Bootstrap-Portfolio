@@ -29,6 +29,12 @@ body{
     line-height: 0.75;
 }
 
+@media only screen and (max-width: 768px){
+    .nav-link{
+        line-height: 1.5!important;
+    }
+}
+
 h1{
     color: #4aaaa5;
 }
